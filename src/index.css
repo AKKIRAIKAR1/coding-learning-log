@@ -1,0 +1,224 @@
+/* ---------- Base ---------- */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Inter, system-ui, sans-serif;
+  background: radial-gradient(circle at top, #0f172a, #020617);
+  color: #e5e7eb;
+}
+
+/* ---------- Headings ---------- */
+h2, h3, h4 {
+  margin-bottom: 10px;
+  color: #f8fafc;
+}
+
+/* ---------- Buttons ---------- */
+button {
+  border: none;
+  border-radius: 14px;
+  padding: 12px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  color: #e5e7eb;
+  background: #1e293b;
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  background: #334155;
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+/* ---------- Login ---------- */
+.login {
+  max-width: 360px;
+  margin: auto;
+  padding: 26px;
+  background: #020617;
+  border-radius: 22px;
+  box-shadow: 0 30px 60px rgba(15,23,42,0.8);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* ---------- Dashboard ---------- */
+.dashboard {
+  padding: 24px;
+  display: grid;
+  gap: 16px;
+}
+
+.dashboard button {
+  background: linear-gradient(135deg, #6366f1, #4f46e5);
+  color: white;
+  box-shadow: 0 12px 24px rgba(79,70,229,0.4);
+}
+
+/* ---------- Pages ---------- */
+.page {
+  max-width: 760px;
+  margin: auto;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* ---------- Inputs ---------- */
+.page input,
+.page select,
+.page textarea {
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid #1e293b;
+  background: #020617;
+  color: #e5e7eb;
+  font-size: 14px;
+  transition: border 0.2s ease, background 0.2s ease;
+}
+
+.page input::placeholder,
+.page textarea::placeholder {
+  color: #94a3b8;
+}
+
+.page input:focus,
+.page textarea:focus,
+.page select:focus {
+  outline: none;
+  border-color: #6366f1;
+  background: #020617;
+}
+
+/* ---------- Book Card ---------- */
+.book-card {
+  background: linear-gradient(180deg, #020617, #020617);
+  padding: 16px;
+  border-radius: 18px;
+  box-shadow: 0 16px 32px rgba(2,6,23,0.9);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.book-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 24px 48px rgba(2,6,23,1);
+}
+
+/* ---------- Snippet Card ---------- */
+.snippet-card {
+  background: linear-gradient(180deg, #020617, #020617);
+  color: #e5e7eb;
+  padding: 16px;
+  border-radius: 18px;
+  box-shadow: 0 18px 42px rgba(2,6,23,1);
+  transition: transform 0.2s ease;
+}
+
+.snippet-card:hover {
+  transform: scale(1.01);
+}
+
+pre {
+  font-size: 13px;
+  line-height: 1.6;
+  background: #020617;
+  border: 1px solid #1e293b;
+  padding: 12px;
+  border-radius: 10px;
+  color: #c7d2fe;
+}
+
+/* ---------- Toast ---------- */
+.toast {
+  position: fixed;
+  bottom: 26px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 14px 20px;
+  border-radius: 16px;
+  font-size: 14px;
+  color: white;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+  animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+  from { transform: translate(-50%, 20px); opacity: 0; }
+  to { transform: translate(-50%, 0); opacity: 1; }
+}
+
+.toast.success { background: #16a34a; }
+.toast.error { background: #dc2626; }
+.toast.info { background: #2563eb; }
+
+/* ---------- Back Button ---------- */
+.back-btn {
+  background: transparent;
+  color: #818cf8;
+  font-size: 14px;
+  padding: 0;
+}
+
+/* ---------- Danger ---------- */
+.logout {
+  background: linear-gradient(135deg, #dc2626, #991b1b);
+  color: white;
+}
+/* ----- Sign Up ----- */
+
+.auth-card {
+  max-width: 420px;
+  margin: auto;
+  padding: 32px;
+  background: #020617;
+  border-radius: 24px;
+  box-shadow: 0 40px 80px rgba(0,0,0,0.8);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.auth-card input {
+  padding: 16px 18px;
+  font-size: 16px;
+  border-radius: 14px;
+  border: 1px solid #1e293b;
+  background: #020617;
+  color: #e5e7eb;
+}
+
+.auth-card input::placeholder {
+  color: #94a3b8;
+}
+
+.auth-card button {
+  padding: 16px;
+  font-size: 16px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #6366f1, #4f46e5);
+  color: white;
+}
+
+
+/* ---------- Mobile ---------- */
+@media (max-width: 600px) {
+  .book-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}
